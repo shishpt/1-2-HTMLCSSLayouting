@@ -1,21 +1,24 @@
-@keyframes sunset-water {
-    from {background-image: linear-gradient(#09c6f9, #045de9);}
-    to {background-image: linear-gradient(#EE6C45, #FFCE61);};
-}
-
 @keyframes sunset {
-    0%  {top: 15em;}
-    25% {top: 20em;}
-    50% {top: 30em;}
-    100%    {top: 40em;}
+    0%  {background-image: linear-gradient(#09c6f9, #045de9);}
+    50% {background-image: linear-gradient(#EE6C45, #FFCE61);};
+    100%    {background-image: linear-gradient(#242F4D,  #242F4D)};
 }
 
+@keyframes sun {
+    0%  {top: 15em;}
+    50% {top: 30em;}
+    100%    {top: 45em;}
+}
+
+@keyframes sky {
+    0%  {background-image: linear-gradient();}
+}
 body {
     min-width: 100vw;
     min-height: 100vh;
 }
 .shell {
-    margin: 0% auto;
+    margin: 0% 0%;
     padding: 10%;
 }
 
@@ -38,20 +41,29 @@ body {
     margin-left: 0px;
     height: 50%;
     width: 100%;
+    animation-name: sunset;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-delay: 5s;
+    animation-fill-mode: forwards;
 }
 
 .sun {
     position: absolute; 
-    left: 35em;
-    top: 15em;
+    margin-top: 150px;
+    margin-left: 400px;
+    left: 20em;
     height: 5em;
     width: 5em;
     background-color: yellow;
     z-index: 1;
     border-radius: 3em;
-    animation-name: sunset;
-    animation-duration: 4s;
-    /*animation-iteration-count: infinite;*/
+    animation-name: sun;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-delay: 5s;
+    animation-direction: alternate;
+    animation-timing-function: linear;
 }
 
 .paper-bottom {
@@ -61,9 +73,12 @@ body {
     margin-left: 0px;
     height: 50%;
     width: 100%;
+    z-index:2;
     animation-name: sunset-water;
-    animation-duration: 4s;
-    /*animation-iteration-count: infinite;*/
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-delay: 5s;
+
 }
 
 .boat{
