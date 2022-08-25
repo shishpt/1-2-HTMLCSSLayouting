@@ -1,0 +1,102 @@
+@keyframes sunset-water {
+    from {background-image: linear-gradient(#09c6f9, #045de9);}
+    to {background-image: linear-gradient(#EE6C45, #FFCE61);};
+}
+
+@keyframes sunset {
+    0%  {top: 15em;}
+    25% {top: 20em;}
+    50% {top: 30em;}
+    100%    {top: 40em;}
+}
+
+body {
+    min-width: 100vw;
+    min-height: 100vh;
+}
+.shell {
+    margin: 0% auto;
+    padding: 10%;
+}
+
+.frame {
+    width: 35em;
+    height: 50em;
+    border: 2em solid #502900;
+}
+
+.paper {
+    width: 33em;
+    height: 48em;
+    padding: 1em;
+}
+
+.paper-top {
+    position: relative;
+    background:azure;
+    background-image: linear-gradient(#83eaf1, #63a4ff);
+    margin-left: 0px;
+    height: 50%;
+    width: 100%;
+}
+
+.sun {
+    position: absolute; 
+    left: 35em;
+    top: 15em;
+    height: 5em;
+    width: 5em;
+    background-color: yellow;
+    z-index: 1;
+    border-radius: 3em;
+    animation-name: sunset;
+    animation-duration: 4s;
+    /*animation-iteration-count: infinite;*/
+}
+
+.paper-bottom {
+    position: relative;
+    background-color: blue;
+    background-image: linear-gradient(#09c6f9, #045de9);
+    margin-left: 0px;
+    height: 50%;
+    width: 100%;
+    animation-name: sunset-water;
+    animation-duration: 4s;
+    /*animation-iteration-count: infinite;*/
+}
+
+.boat{
+    position: absolute;
+    bottom: 30%;
+    left:25%;
+    z-index: 1;
+    width: 300px;
+    height: 300px;
+}
+
+.bbody {
+    width: 200px;
+    height: 30px;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-top: 50px solid red;
+    z-index: ;
+}
+.bmast {
+    width: 10px;
+    height: 150px;
+    background-color: #502900;
+    margin-left:50%;
+    margin-top: -75%;
+    z-index:1;
+}
+.bsail{
+    width: 500px;
+    height: 50px;
+    border-top: 25px solid transparent;
+    border-left: 100px solid white;
+    margin-left:50%;
+    margin-top: -50%;
+    z-index: -5;
+}
