@@ -50,8 +50,8 @@ body {
 
 .sun {
     position: absolute; 
-    margin-top: 150px;
-    margin-left: 400px;
+    margin-top: 10px;
+    margin-left: 150px;
     left: 20em;
     height: 5em;
     width: 5em;
